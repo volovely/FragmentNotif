@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_main"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnNextFragment"
+        android:text="Next fragment"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnNextFragment"
+        android:layout_alignParentStart="true"
+        android:id="@+id/receiveFromFrag"
+        android:layout_alignEnd="@+id/btnNextFragment" />
+
+    <Button
+        android:text="Notification"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSendNotification"
+        android:layout_below="@+id/receiveFromFrag"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/receiveFromFrag" />
+</RelativeLayout>
