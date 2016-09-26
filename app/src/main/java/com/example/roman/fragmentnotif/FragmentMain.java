@@ -26,6 +26,11 @@ public class FragmentMain extends Fragment {
 
     }
 
+    @Override
+    public void onResume() {
+        super.onResume();
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -49,7 +54,7 @@ public class FragmentMain extends Fragment {
 //                        Intent.FLAG_ACTIVITY_SINGLE_TOP |
 //                        Intent.FLAG_ACTIVITY_NEW_TASK));
                 intent.putExtra("from", "true");
-                PendingIntent pendingIntent = PendingIntent.getActivity(getContext(), (int) System.currentTimeMillis(), intent, 0);
+                PendingIntent pendingIntent = PendingIntent.getActivity(getContext(), (int) System.currentTimeMillis(), intent, PendingIntent.FLAG_UPDATE_CURRENT);
 
                 Notification notification = new Notification.Builder(getContext())
                         .setSmallIcon(R.mipmap.ic_launcher)
